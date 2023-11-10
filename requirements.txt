@@ -1,0 +1,6 @@
+azure-functions==1.13.3
+azure-ai-language-conversations
+azure-cosmos==4.3.1
+word2number
+gremlinpython==3.6.2
+requests
