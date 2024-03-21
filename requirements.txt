@@ -1,4 +1,4 @@
-azure-functions==1.13.3
+azure-functions
 azure-ai-language-conversations
 azure-cosmos==4.3.1
 word2number
