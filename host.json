@@ -3,12 +3,5 @@
   "extensionBundle": {
     "id": "Microsoft.Azure.Functions.ExtensionBundle.Preview",
     "version": "[4.*, 5.0.0)"
-  },
-  "extensions": {
-    "http": {
-      "routePrefix": "v1",
-      "maxConcurrentRequests": 5,
-      "maxOutstandingRequests": 30
-    }
   }
 }
