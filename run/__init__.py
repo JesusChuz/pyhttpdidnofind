@@ -16,5 +16,10 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     secret_client = SecretClient(vault_url="https://jesumekvpymsi.vault.azure.net/", credential=credential)
     secret_name = "mysecret"
     secret_value = secret_client.get_secret(secret_name).value
+ 
 
-    return func.HttpResponse(f"The secret value is: {secret_value}")
+    identityendpoint = os.environ.get('IDENTITY_ENDPOINT')
+    identitysecret = os.environ.get('IDENTITY_SECRET')
+
+
+    return func.HttpResponse(f"The secret value is: {secret_value}, endpoint: {identityendpoint} , secret: {identitysecret}")
