@@ -5,12 +5,12 @@ from azure.keyvault.secrets import SecretClient
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
     # Check if deployed to Azure
-    if 'WEBSITE_SITE_NAME' in os.environ:
+   # if 'WEBSITE_SITE_NAME' in os.environ:
         # Using Managed Identity when deployed to Azure
         credential = ManagedIdentityCredential()
-    else:
+    #else:
         # Using DefaultAzureCredential for local development
-        credential = DefaultAzureCredential()
+     #   credential = DefaultAzureCredential()
 
     # Create SecretClient with appropriate credential
     secret_client = SecretClient(vault_url="https://jesumekvpymsi.vault.azure.net/", credential=credential)
