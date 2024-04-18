@@ -7,7 +7,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     # Check if deployed to Azure
    # if 'WEBSITE_SITE_NAME' in os.environ:
         # Using Managed Identity when deployed to Azure
-        credential = ManagedIdentityCredential()
+    credential = ManagedIdentityCredential()
     #else:
         # Using DefaultAzureCredential for local development
      #   credential = DefaultAzureCredential()
